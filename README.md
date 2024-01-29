@@ -28,4 +28,28 @@ Once the Google account has been configured with active credits and project, we 
 •	Values.txt – Local file to store the values to be used for performance testing and comparison.  
 •	Kvsmultipleclient.py – Contain code to spawn multiple clients at the same time to test concurrency.  
 
+**Execution Instructions**  
+•	Execute “python3 kvsserver.py” on server side and select any one storage structure.  
+•	Once the Server is started and we get the message” Server started on host” execute “python3 kvsclient.py” on the client side.  
+    a.	Test Client Calls One by One – Allows user to enter get and set information one by one as per their requirements and accordingly performs the get and set operation.  
+    b.	Performance Testing – Allows user to test the performance of the key value store.  
+The performance testing option further lets users choose if they want to test the performance of the GET operation or SET operation.  
+To Execute Multiple clients in multiple spawned windows, execute “python3 kvsmultipleclient.py” on the client terminal and select option 3.  
+This will spawn 50 clients and then Get or set operations can be performed on each of the clients and the memory store will be modified accordingly.  
+
+**Google’s Key-Value Store**  
+I have implemented two of the Google’s Key – Value Store features for performing the comparison with the native VM Disk file based Memcached.  
+**1.	Google Cloud Storage Bucket**  
+•	Created a bucket-based storage which consisted of the blob file of “Json” type to store the keys and values.  
+•	GCS bucket provides file-based storage system that can handle large amounts of data and can be used for long term storage.  
+•	However, the performance is not optimized for a low latency Key-Value storage.  
+•	Bucket is mostly used for data archival and long-term storage use cases.  
+**2.	Redis Memory Store**  
+•	Redis is an in-memory data store specifically designed for low latency key-value storage and high-speed access.  
+•	The get and set operations are extremely fast and makes an excellent choice for a typical Key- Value Store.  
+•	Redis can be scaled on Google cloud by increasing the required resources.  
+•	I deployed the Redis instance on Google cloud and made corresponding get and Set operations.  
+P.S: - Make sure “Allow full access to all Cloud APIs” option is checked on the VM instance from which the Redis instance is being called.  
+
+
 
