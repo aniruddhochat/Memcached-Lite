@@ -1,0 +1,5 @@
+HEADER_SIZE = 4096
+PORT = 9888
+SERVER = "10.150.0.5"
+FORMAT = "utf-8"
+FILENAME = "KeyValueStore.txt"

@@ -1,0 +1,11 @@
+HEADER_SIZE = 4096
+PORT = 9888
+SERVER = "10.150.0.5"
+FORMAT = "utf-8"
+FILENAME = "KeyValueStore.txt"
+CREDENTIALS = 'aniruddho-chatterjee-fall2023-f967fa2ed4a5.json'
+BUCKET_NAME = 'kvsbucket'
+BLOB_NAME  = 'kvsblob'
+REDIS_HOST = ''
+REDIS_PORT =''
+REDIS_PASSWORD = ''
