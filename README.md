@@ -66,6 +66,6 @@ P.S: - Make sure `Allow full access to all Cloud APIs` option is checked on the 
 •	It is evident that **Redis Memory Store** performs as good as the local VM Boot Disk.  
 •	**Google Cloud Storage Bucket** performs relatively slower than Redis and even throws out an error `Rate Limit Exceeded` when consecutive `set` opertaions are performed within a short period of time.
 
-### Conclusion
+### Conclusion  
 •	**Redis Memory Store** seems to be the ideal choice for a Key-Value based caching system since it can easily handle huge amount of data along with multiple consecutive read and write operations.  
-•	**Google Cloud Storage Bucket** is a good choice if the functionality does not demand concecutive write operations and there needs to be a visibility of the data stored in and transferred through any third party integrations.
+•	**Google Cloud Storage Bucket** is a good choice if the functionality does not demand concecutive write operations and there needs to be a visibility of the data stored in and transferred through any third party integrations.  
